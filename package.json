@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ryma1738/teamProfileGen/issues"
   },
-  "homepage": "https://github.com/ryma1738/teamProfileGen#readme"
+  "homepage": "https://github.com/ryma1738/teamProfileGen#readme",
+  "dependencies": {
+    "inquirer": "^8.1.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.5"
+  }
 }
