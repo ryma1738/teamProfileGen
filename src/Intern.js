@@ -2,7 +2,7 @@ const questions = [
     {
         type: 'input',
         name: 'name',
-        message: 'What is the name of the intern?'
+        message: 'What is the full name of the intern?'
     },
     {
         type: "input",

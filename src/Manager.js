@@ -2,7 +2,7 @@ const questions = [
     {
         type: 'input',
         name: 'name',
-        message: 'What is the name your Team Lead?'
+        message: 'What is the full name of your Team Lead?'
     },
     {
         type: "input",

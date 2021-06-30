@@ -1,67 +1,4 @@
 
-function listEngineer(engineers) {
-    let htmlList = [];
-    for (let i = 0; i < engineers.length; i++) {
-        htmlList.push(`                                
-                                    <li><a href="#engineer-${i}" class="ps-1 pe-4 py-1">${engineers[i].name}</a></li>
-        `);
-    }
-    return htmlList.join('');
-}
-
-function listInterns(interns) {
-    let htmlList = [];
-    for (let i = 0; i < interns.length; i++) {
-        htmlList.push(`
-                                     <li><a href="#intern-${i}" class="ps-1 pe-4 py-1">${interns[i].name}</a></li>
-        `);
-    }
-    return htmlList.join('');
-}
-
-function engineersCards(engineers) {
-    let htmlList = [];
-    for (let i = 0; i < engineers.length; i++) {
-        htmlList.push(`
-                                        <div class="col-12 col-md-6 col-lg-4 col-xxl-2 pb-2">
-                                            <div class="card" id="engineer-${i}">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">${engineers[i].name}</h5>
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">ID: ${engineers[i].id}</li>
-                                                        <li class="list-group-item"><a href="mailto:${engineers[i].email}" target="_blank">Email: ${engineers[i].email}</a></li>
-                                                        <li class="list-group-item"><a href="https://github.com/${engineers[i].github}" target="_blank">Github: ${engineers[i].github}</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>`);
-    }
-    return htmlList.join('');
-}
-
-function internsCards(interns) {
-    let htmlList = [];
-    for (let i = 0; i < interns.length; i++) {
-        htmlList.push(`
-                                        <div class="col-12 col-md-6 col-lg-4 col-xxl-2 pb-2">
-                                            <div class="card" id="intern-${i}">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">${interns[i].name}</h5>
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">ID: ${interns[i].id}</li>
-                                                        <li class="list-group-item"><a href="mailto:${interns[i].email}" target="_blank">Email: ${interns[i].email}</a></li>
-                                                        <li class="list-group-item">School: ${interns[i].school}</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>`);
-    }
-    return htmlList.join('');
-}
-
-function createHTML(company, teamLead, engineers, interns) {
-    console.log('Creating HTML...')
-    return`
     <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -79,7 +16,7 @@ function createHTML(company, teamLead, engineers, interns) {
                     <div class="col-4 d-flex justify-content-center align-items-center">
                         <div class="my-auto header-box">
                             <h1 class="text-center py-1 px-4">
-                                ${company}
+                                Zoru Computer Art
                             </h1>
                         </div>
                     </div>
@@ -87,7 +24,7 @@ function createHTML(company, teamLead, engineers, interns) {
                     <div class="col-6 d-flex align-items-end justify-content-end">
                         <div class="header-box">
                             <h2 class="text-center px-3 px-1">
-                               ${teamLead.name}'s Team Directory
+                               Ryan Jepson's Team Directory
                             </h2>
                         </div>
                     </div>
@@ -101,19 +38,25 @@ function createHTML(company, teamLead, engineers, interns) {
                             <div class="navbar-list">
                                 <h4><a href="#team-lead">Team Lead:</a></h4>
                                 <ul>
-                                    <li><a href="#team-lead" class="ps-1 pe-4 py-1">${teamLead.name}</a></li>
+                                    <li><a href="#team-lead" class="ps-1 pe-4 py-1">Ryan Jepson</a></li>
                                 </ul>
                             </div>
                             <div class="navbar-list">
                                 <h4><a href="#engineers">Engineers:</a></h4>
                                 <ul>
-                                    ${listEngineer(engineers)}
+                                                                    
+                                    <li><a href="#engineer-0" class="ps-1 pe-4 py-1">Eric Johnson</a></li>
+                                        
+                                    <li><a href="#engineer-1" class="ps-1 pe-4 py-1">Adam Anderson</a></li>
+        
                                 </ul>
                             </div>
                             <div class="navbar-list">
                                 <h4><a href="#interns">Interns:</a></h4>
                                 <ul>
-                                    ${listInterns(interns)}
+                                    
+                                     <li><a href="#intern-0" class="ps-1 pe-4 py-1">Alice Smith</a></li>
+        
                                 </ul>
                             </div>
                         </div>
@@ -124,18 +67,18 @@ function createHTML(company, teamLead, engineers, interns) {
                             <div class="col-12">
                                 <section>
                                     <div class="section-title p-2" id="team-lead">
-                                        <h4>Team Lead: ${teamLead.name}</h4>
+                                        <h4>Team Lead: Ryan Jepson</h4>
                                     </div>
                                     <div>
                                         <div class="row mx-2 my-1">
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <h5 class="text-center">Employee id: ${teamLead.id}</h5>
+                                                <h5 class="text-center">Employee id: 6549876321</h5>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">  
-                                                <h5 class="text-center"><a href="mailto:${teamLead.email}" target="_blank">Email: ${teamLead.email}</a></h5>
+                                                <h5 class="text-center"><a href="mailto:rymaster.cs@gmail.com" target="_blank">Email: rymaster.cs@gmail.com</a></h5>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">    
-                                                <h5 class="text-center"><a href="tel:${teamLead.officeNumber}">Office #: ${teamLead.officeNumber}</a></h5>  
+                                                <h5 class="text-center"><a href="tel:801-696-6549">Office #: 801-696-6549</a></h5>  
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +94,31 @@ function createHTML(company, teamLead, engineers, interns) {
                                     </div>
                                     <div class="row px-4 pt-2">
     
-                                        ${engineersCards(engineers)}
+                                        
+                                        <div class="col-12 col-md-6 col-lg-4 col-xxl-2 pb-2">
+                                            <div class="card" id="engineer-0">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Eric Johnson</h5>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">ID: 654987321</li>
+                                                        <li class="list-group-item"><a href="mailto:EricJohnson@gmail.com" target="_blank">Email: EricJohnson@gmail.com</a></li>
+                                                        <li class="list-group-item"><a href="https://github.com/chandrian" target="_blank">Github: chandrian</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 col-xxl-2 pb-2">
+                                            <div class="card" id="engineer-1">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Adam Anderson</h5>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">ID: 987654321</li>
+                                                        <li class="list-group-item"><a href="mailto:Adamanderson@gmail.com" target="_blank">Email: Adamanderson@gmail.com</a></li>
+                                                        <li class="list-group-item"><a href="https://github.com/adamrockscs" target="_blank">Github: adamrockscs</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
     
                                     </div> 
                                 </section>
@@ -166,7 +133,19 @@ function createHTML(company, teamLead, engineers, interns) {
                                     </div>
                                     <div class="row px-4 pt-2">
 
-                                        ${internsCards(interns)}
+                                        
+                                        <div class="col-12 col-md-6 col-lg-4 col-xxl-2 pb-2">
+                                            <div class="card" id="intern-0">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Alice Smith</h5>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">ID: 987654987</li>
+                                                        <li class="list-group-item"><a href="mailto:Rymaster.ws@gmail.com" target="_blank">Email: Rymaster.ws@gmail.com</a></li>
+                                                        <li class="list-group-item">School: Utah State University</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
     
                                     </div> 
                                 </section>
@@ -177,7 +156,4 @@ function createHTML(company, teamLead, engineers, interns) {
             </main>
         </body>
     </html>
-    `
-}
-
-module.exports = createHTML;
+    

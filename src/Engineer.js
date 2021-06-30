@@ -2,7 +2,7 @@ const questions = [
     {
         type: 'input',
         name: 'name',
-        message: 'What is the name of the software engineer?'
+        message: 'What is the full name of the software engineer?'
     },
     {
         type: "input",

@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const Manager = require("./Manager.js");
 const Engineer = require("./Engineer.js");
 const Intern = require("./Intern");
+const createHTML = require('./htmlGen');
+const fs = require('fs');
 
 function Main() {
     this.companyName;
@@ -82,7 +84,11 @@ Main.prototype.intern = function() {
 }
 
 Main.prototype.createWebsite = function() {
-    console.log(this);
+    let html = createHTML(this.companyName, this.teamLead, this.engineers, this.interns);
+    fs.writeFile('./src/dev/index.html', html, (err) => {
+        if (err) throw err;
+        console.log('File Created! Please go check src/dev to find the html and css files!');
+    });
 }
 
 module.exports = Main;
