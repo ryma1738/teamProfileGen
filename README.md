@@ -27,7 +27,7 @@ You May Use this project as you wish, but if you do not modify the code very muc
 To test to make sure you install the project correctly you can install the dev tools from npm and run npm test to make sure it is working.
 
 ## Video Link
-[[Video Link]](https://www.youtube.com/watch?v=Z0bBkZcl2dI&list=PL0oJ2_Q2jPrfHkS6Py1IRZBilTNpiKlXB&index=87)
+[[Video Link]](https://youtu.be/b_0bRX8coBY)
 
 ## License
 
