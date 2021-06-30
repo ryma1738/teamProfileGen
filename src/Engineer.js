@@ -5,9 +5,17 @@ const questions = [
         message: 'What is the name of the software engineer?'
     },
     {
-        type: "number",
+        type: "input",
         name: 'employeeId',
-        message: 'Please enter the engineers employee ID:'
+        message: 'Please enter the engineers employee ID:',
+        validate: input => {
+            if (isNaN(input)) {
+                console.log("Must be a number!")
+                return false;
+            }  else {
+                return true;
+            }
+        }
     },
     {
         type: 'input',

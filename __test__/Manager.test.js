@@ -4,7 +4,7 @@ const data = {
     name: 'ryan',
     employeeId: 6546838435,
     email: 'rymaster.ws@gmail.com',
-    officeNumber: 8016524658
+    officeNumber: '8016524658'
 };
 
 test('creates a Manager object', () => {

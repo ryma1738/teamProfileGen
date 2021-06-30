@@ -5,9 +5,17 @@ const questions = [
         message: 'What is the name your Team Lead?'
     },
     {
-        type: "number",
+        type: "input",
         name: 'employeeId',
-        message: 'Please enter the team leads employee ID:'
+        message: 'Please enter the team leads employee ID:',
+        validate: input => {
+            if (isNaN(input)) {
+                console.log("Must be a number!")
+                return false;
+            }  else {
+                return true;
+            }
+        }
     },
     {
         type: 'input',
@@ -17,7 +25,7 @@ const questions = [
     {
         type: 'input',
         name: 'officeNumber',
-        message: 'Please enter the team leads office number (example: 8885557777):',
+        message: 'Please enter the team leads office number: (example: 8885557777):',
         validate: input => {
             if (isNaN(input)) {
                 console.log("Must be a phone number without spaces or -!")
